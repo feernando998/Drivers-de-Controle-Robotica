@@ -1,0 +1,36 @@
+program DriverDeControle
+
+dim recebe as string[6]
+dim valor  as integer
+dim motor  as integer
+dim ciclo  as integer
+dim x      as integer
+dim tmpOn  as integer
+dim tmpOff as integer
+dim m1     as boolean
+dim m2     as boolean
+
+main:
+TRISA=%11111100
+TRISB=%01111111
+TRISC=%00000000
+INTCON=%00000000
+ANSEL=%00000000
+ANSELH=%00000000
+PORTC=0
+
+tmpOn=50
+tmpOff=0
+Usart_Init(9600)
+
+executa:
+        if Usart_Data_Ready() > 0 then
+           Usart_Read_Text(recebe,"/")
+           valor = StrToInt(recebe)
+
+           recebe=""
+
+        end if
+
+        goto executa
+end.
