@@ -52,128 +52,131 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.chkInvert)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtAngulo)
+        Me.GroupBox1.Font = New System.Drawing.Font("Bahnschrift SemiBold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(260, 222)
+        Me.GroupBox1.Size = New System.Drawing.Size(231, 239)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(72, 98)
+        Me.Label5.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(65, 100)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(45, 17)
+        Me.Label5.Size = New System.Drawing.Size(43, 16)
         Me.Label5.TabIndex = 25
         Me.Label5.Text = "Ciclos"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(8, 72)
+        Me.Label4.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(8, 74)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(109, 17)
+        Me.Label4.Size = New System.Drawing.Size(100, 16)
         Me.Label4.TabIndex = 24
         Me.Label4.Text = "Ângulo por ciclo"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(63, 46)
+        Me.Label3.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(57, 48)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(54, 17)
+        Me.Label3.Size = New System.Drawing.Size(51, 16)
         Me.Label3.TabIndex = 23
         Me.Label3.Text = "Passos"
         '
         'txtCiclos
         '
-        Me.txtCiclos.Location = New System.Drawing.Point(123, 97)
+        Me.txtCiclos.Location = New System.Drawing.Point(114, 99)
         Me.txtCiclos.Name = "txtCiclos"
         Me.txtCiclos.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.txtCiclos.Size = New System.Drawing.Size(100, 20)
-        Me.txtCiclos.TabIndex = 22
+        Me.txtCiclos.Size = New System.Drawing.Size(73, 21)
+        Me.txtCiclos.TabIndex = 4
         '
         'txtAngStep
         '
-        Me.txtAngStep.Location = New System.Drawing.Point(123, 71)
+        Me.txtAngStep.Location = New System.Drawing.Point(114, 73)
         Me.txtAngStep.Name = "txtAngStep"
         Me.txtAngStep.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.txtAngStep.Size = New System.Drawing.Size(100, 20)
-        Me.txtAngStep.TabIndex = 21
+        Me.txtAngStep.Size = New System.Drawing.Size(73, 21)
+        Me.txtAngStep.TabIndex = 3
         '
         'txtSteps
         '
-        Me.txtSteps.Location = New System.Drawing.Point(123, 45)
+        Me.txtSteps.Location = New System.Drawing.Point(114, 47)
         Me.txtSteps.Name = "txtSteps"
         Me.txtSteps.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.txtSteps.Size = New System.Drawing.Size(100, 20)
-        Me.txtSteps.TabIndex = 20
+        Me.txtSteps.Size = New System.Drawing.Size(73, 21)
+        Me.txtSteps.TabIndex = 2
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(73, 152)
+        Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(66, 154)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 17)
+        Me.Label2.Size = New System.Drawing.Size(42, 16)
         Me.Label2.TabIndex = 19
         Me.Label2.Text = "Motor"
         '
         'cmbMotor
         '
         Me.cmbMotor.FormattingEnabled = True
-        Me.cmbMotor.Items.AddRange(New Object() {"Motor 1", "Motor 2", "Ambos"})
-        Me.cmbMotor.Location = New System.Drawing.Point(123, 151)
+        Me.cmbMotor.Items.AddRange(New Object() {"Ambos", "Motor 1", "Motor 2"})
+        Me.cmbMotor.Location = New System.Drawing.Point(114, 153)
         Me.cmbMotor.Name = "cmbMotor"
-        Me.cmbMotor.Size = New System.Drawing.Size(100, 21)
-        Me.cmbMotor.TabIndex = 18
+        Me.cmbMotor.Size = New System.Drawing.Size(73, 21)
+        Me.cmbMotor.TabIndex = 6
         '
         'btnEnviar
         '
-        Me.btnEnviar.Location = New System.Drawing.Point(123, 178)
+        Me.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnEnviar.Font = New System.Drawing.Font("Bahnschrift SemiBold", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEnviar.Location = New System.Drawing.Point(6, 200)
         Me.btnEnviar.Name = "btnEnviar"
-        Me.btnEnviar.Size = New System.Drawing.Size(75, 23)
-        Me.btnEnviar.TabIndex = 17
+        Me.btnEnviar.Size = New System.Drawing.Size(218, 33)
+        Me.btnEnviar.TabIndex = 7
         Me.btnEnviar.Text = "Enviar"
         Me.btnEnviar.UseVisualStyleBackColor = True
         '
         'chkInvert
         '
         Me.chkInvert.AutoSize = True
-        Me.chkInvert.Location = New System.Drawing.Point(123, 128)
+        Me.chkInvert.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkInvert.Location = New System.Drawing.Point(114, 130)
         Me.chkInvert.Name = "chkInvert"
-        Me.chkInvert.Size = New System.Drawing.Size(68, 17)
-        Me.chkInvert.TabIndex = 16
+        Me.chkInvert.Size = New System.Drawing.Size(73, 18)
+        Me.chkInvert.TabIndex = 5
         Me.chkInvert.Text = "Inverter?"
         Me.chkInvert.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(65, 20)
+        Me.Label1.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(60, 22)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(52, 17)
+        Me.Label1.Size = New System.Drawing.Size(48, 16)
         Me.Label1.TabIndex = 15
         Me.Label1.Text = "Ângulo"
         '
         'txtAngulo
         '
-        Me.txtAngulo.Location = New System.Drawing.Point(123, 19)
+        Me.txtAngulo.Location = New System.Drawing.Point(114, 21)
         Me.txtAngulo.Name = "txtAngulo"
         Me.txtAngulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.txtAngulo.Size = New System.Drawing.Size(100, 20)
-        Me.txtAngulo.TabIndex = 14
+        Me.txtAngulo.Size = New System.Drawing.Size(73, 21)
+        Me.txtAngulo.TabIndex = 1
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 246)
+        Me.ClientSize = New System.Drawing.Size(248, 263)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form1"
         Me.Text = "Controle"
