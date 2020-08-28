@@ -22,9 +22,178 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtCiclos = New System.Windows.Forms.TextBox()
+        Me.txtAngStep = New System.Windows.Forms.TextBox()
+        Me.txtSteps = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cmbMotor = New System.Windows.Forms.ComboBox()
+        Me.btnEnviar = New System.Windows.Forms.Button()
+        Me.chkInvert = New System.Windows.Forms.CheckBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtAngulo = New System.Windows.Forms.TextBox()
+        Me.GroupBox1.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.txtCiclos)
+        Me.GroupBox1.Controls.Add(Me.txtAngStep)
+        Me.GroupBox1.Controls.Add(Me.txtSteps)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.cmbMotor)
+        Me.GroupBox1.Controls.Add(Me.btnEnviar)
+        Me.GroupBox1.Controls.Add(Me.chkInvert)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.txtAngulo)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(260, 222)
+        Me.GroupBox1.TabIndex = 0
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "GroupBox1"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(72, 98)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(45, 17)
+        Me.Label5.TabIndex = 25
+        Me.Label5.Text = "Ciclos"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(8, 72)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(109, 17)
+        Me.Label4.TabIndex = 24
+        Me.Label4.Text = "Ângulo por ciclo"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(63, 46)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(54, 17)
+        Me.Label3.TabIndex = 23
+        Me.Label3.Text = "Passos"
+        '
+        'txtCiclos
+        '
+        Me.txtCiclos.Location = New System.Drawing.Point(123, 97)
+        Me.txtCiclos.Name = "txtCiclos"
+        Me.txtCiclos.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.txtCiclos.Size = New System.Drawing.Size(100, 20)
+        Me.txtCiclos.TabIndex = 22
+        '
+        'txtAngStep
+        '
+        Me.txtAngStep.Location = New System.Drawing.Point(123, 71)
+        Me.txtAngStep.Name = "txtAngStep"
+        Me.txtAngStep.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.txtAngStep.Size = New System.Drawing.Size(100, 20)
+        Me.txtAngStep.TabIndex = 21
+        '
+        'txtSteps
+        '
+        Me.txtSteps.Location = New System.Drawing.Point(123, 45)
+        Me.txtSteps.Name = "txtSteps"
+        Me.txtSteps.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.txtSteps.Size = New System.Drawing.Size(100, 20)
+        Me.txtSteps.TabIndex = 20
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(73, 152)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(44, 17)
+        Me.Label2.TabIndex = 19
+        Me.Label2.Text = "Motor"
+        '
+        'cmbMotor
+        '
+        Me.cmbMotor.FormattingEnabled = True
+        Me.cmbMotor.Items.AddRange(New Object() {"Motor 1", "Motor 2", "Ambos"})
+        Me.cmbMotor.Location = New System.Drawing.Point(123, 151)
+        Me.cmbMotor.Name = "cmbMotor"
+        Me.cmbMotor.Size = New System.Drawing.Size(100, 21)
+        Me.cmbMotor.TabIndex = 18
+        '
+        'btnEnviar
+        '
+        Me.btnEnviar.Location = New System.Drawing.Point(123, 178)
+        Me.btnEnviar.Name = "btnEnviar"
+        Me.btnEnviar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEnviar.TabIndex = 17
+        Me.btnEnviar.Text = "Enviar"
+        Me.btnEnviar.UseVisualStyleBackColor = True
+        '
+        'chkInvert
+        '
+        Me.chkInvert.AutoSize = True
+        Me.chkInvert.Location = New System.Drawing.Point(123, 128)
+        Me.chkInvert.Name = "chkInvert"
+        Me.chkInvert.Size = New System.Drawing.Size(68, 17)
+        Me.chkInvert.TabIndex = 16
+        Me.chkInvert.Text = "Inverter?"
+        Me.chkInvert.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(65, 20)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(52, 17)
+        Me.Label1.TabIndex = 15
+        Me.Label1.Text = "Ângulo"
+        '
+        'txtAngulo
+        '
+        Me.txtAngulo.Location = New System.Drawing.Point(123, 19)
+        Me.txtAngulo.Name = "txtAngulo"
+        Me.txtAngulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.txtAngulo.Size = New System.Drawing.Size(100, 20)
+        Me.txtAngulo.TabIndex = 14
+        '
+        'Form1
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Text = "Form1"
+        Me.ClientSize = New System.Drawing.Size(284, 246)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Name = "Form1"
+        Me.Text = "Controle"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.ResumeLayout(False)
+
     End Sub
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents txtCiclos As System.Windows.Forms.TextBox
+    Friend WithEvents txtAngStep As System.Windows.Forms.TextBox
+    Friend WithEvents txtSteps As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents cmbMotor As System.Windows.Forms.ComboBox
+    Friend WithEvents btnEnviar As System.Windows.Forms.Button
+    Friend WithEvents chkInvert As System.Windows.Forms.CheckBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents txtAngulo As System.Windows.Forms.TextBox
 
 End Class
