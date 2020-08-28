@@ -3,6 +3,7 @@ program DriverDeControle
 dim recebe as string[6]
 dim valor  as integer
 dim motor  as integer
+dim motor2  as integer
 dim ciclo  as integer
 dim x      as integer
 dim tmpOn  as integer
