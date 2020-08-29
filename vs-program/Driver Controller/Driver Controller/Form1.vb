@@ -14,27 +14,27 @@
         If SerialPort1.IsOpen() = True Then
             If cmbMotor.SelectedIndex = 0 Then
                 If chkInvert.Checked = False Then
-                    SerialPort1.Write(Str(Int(txtCiclos.Text * 1 + 1000)) & "-NI/")
-                    txtEnviado.Text = Str(Int(txtCiclos.Text * 1 + 1000)) + "-NI/"
+                    SerialPort1.Write(Str(Int(txtCiclos.Text * 1 + 1000)) & "-PN/")
+                    txtEnviado.Text = Str(Int(txtCiclos.Text * 1 + 1000)) + "-PN/"
                 Else
-                    SerialPort1.Write(Str(Int(txtCiclos.Text * 1 + 1000)) & "-I/")
-                    txtEnviado.Text = Str(Int(txtCiclos.Text * 1 + 1000)) + "-I/"
+                    SerialPort1.Write(Str(Int(txtCiclos.Text * 1 + 1000)) & "-PI/")
+                    txtEnviado.Text = Str(Int(txtCiclos.Text * 1 + 1000)) + "-PI/"
                 End If
             ElseIf cmbMotor.SelectedIndex = 1 Then
                 If chkInvert.Checked = False Then
-                    SerialPort1.Write(Str(Int(txtCiclos.Text * 1 + 2000)) & "-NI/")
-                    txtEnviado.Text = Str(Int(txtCiclos.Text * 1 + 2000)) + "-NI/"
+                    SerialPort1.Write(Str(Int(txtCiclos.Text * 1 + 2000)) & "-SN/")
+                    txtEnviado.Text = Str(Int(txtCiclos.Text * 1 + 2000)) + "-SN/"
                 Else
-                    SerialPort1.Write(Str(Int(txtCiclos.Text * 1 + 2000)) & "-I/")
-                    txtEnviado.Text = Str(Int(txtCiclos.Text * 1 + 2000)) + "-I/"
+                    SerialPort1.Write(Str(Int(txtCiclos.Text * 1 + 2000)) & "-SI/")
+                    txtEnviado.Text = Str(Int(txtCiclos.Text * 1 + 2000)) + "-SI/"
                 End If
             ElseIf cmbMotor.SelectedIndex = 2 Then
                 If chkInvert.Checked = False Then
-                    SerialPort1.Write(Str(Int(txtCiclos.Text * 1 + 3000)) & "-NI/")
-                    txtEnviado.Text = Str(Int(txtCiclos.Text * 1 + 3000)) + "-NI/"
+                    SerialPort1.Write(Str(Int(txtCiclos.Text * 1 + 3000)) & "-AN/")
+                    txtEnviado.Text = Str(Int(txtCiclos.Text * 1 + 3000)) + "-AN/"
                 Else
-                    SerialPort1.Write(Str(Int(txtCiclos.Text * 1 + 3000)) & "-I/")
-                    txtEnviado.Text = Str(Int(txtCiclos.Text * 1 + 3000)) + "-I/"
+                    SerialPort1.Write(Str(Int(txtCiclos.Text * 1 + 3000)) & "-AI/")
+                    txtEnviado.Text = Str(Int(txtCiclos.Text * 1 + 3000)) + "-AI/"
                 End If
             End If
         End If

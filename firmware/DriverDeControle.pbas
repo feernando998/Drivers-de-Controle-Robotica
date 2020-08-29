@@ -1,6 +1,7 @@
 program DriverDeControle
 
-dim recebe as string[6]
+dim valorStr as string[6]
+dim invert   as string[6]
 dim valor  as integer
 dim motor  as integer
 dim motor2  as integer
@@ -26,7 +27,8 @@ Usart_Init(9600)
 
 executa:
         if Usart_Data_Ready() > 0 then
-           Usart_Read_Text(recebe,"/")
+           Usart_Read_Text(recebe,"-")
+           Usart_Read_Text(invert,"/")
            valor = StrToInt(recebe)
 
            recebe=""
