@@ -24,6 +24,8 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtTerminais = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -36,8 +38,6 @@ Partial Class Form1
         Me.chkInvert = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtAngulo = New System.Windows.Forms.TextBox()
-        Me.txtTerminais = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.txtEnviado = New System.Windows.Forms.TextBox()
@@ -67,6 +67,25 @@ Partial Class Form1
         Me.GroupBox1.Size = New System.Drawing.Size(231, 264)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(44, 76)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(64, 16)
+        Me.Label6.TabIndex = 27
+        Me.Label6.Text = "Terminais"
+        '
+        'txtTerminais
+        '
+        Me.txtTerminais.Location = New System.Drawing.Point(114, 75)
+        Me.txtTerminais.Name = "txtTerminais"
+        Me.txtTerminais.Size = New System.Drawing.Size(73, 21)
+        Me.txtTerminais.TabIndex = 3
+        Me.txtTerminais.Text = "4"
+        Me.txtTerminais.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label5
         '
@@ -191,25 +210,6 @@ Partial Class Form1
         Me.txtAngulo.Text = "360"
         Me.txtAngulo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'txtTerminais
-        '
-        Me.txtTerminais.Location = New System.Drawing.Point(114, 75)
-        Me.txtTerminais.Name = "txtTerminais"
-        Me.txtTerminais.Size = New System.Drawing.Size(73, 21)
-        Me.txtTerminais.TabIndex = 3
-        Me.txtTerminais.Text = "4"
-        Me.txtTerminais.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(44, 76)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(64, 16)
-        Me.Label6.TabIndex = 27
-        Me.Label6.Text = "Terminais"
-        '
         'SerialPort1
         '
         Me.SerialPort1.PortName = "COM4"
@@ -239,7 +239,10 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(457, 288)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "Form1"
+        Me.ShowIcon = False
         Me.Text = "Controle"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
