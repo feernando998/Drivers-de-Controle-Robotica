@@ -47,6 +47,7 @@ Partial Class Form1
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.txtTerminais)
         Me.GroupBox1.Controls.Add(Me.Label5)
@@ -64,7 +65,7 @@ Partial Class Form1
         Me.GroupBox1.Font = New System.Drawing.Font("Bahnschrift SemiBold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(231, 264)
+        Me.GroupBox1.Size = New System.Drawing.Size(231, 334)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -80,8 +81,10 @@ Partial Class Form1
         '
         'txtTerminais
         '
+        Me.txtTerminais.Enabled = False
         Me.txtTerminais.Location = New System.Drawing.Point(114, 75)
         Me.txtTerminais.Name = "txtTerminais"
+        Me.txtTerminais.ReadOnly = True
         Me.txtTerminais.Size = New System.Drawing.Size(73, 21)
         Me.txtTerminais.TabIndex = 3
         Me.txtTerminais.Text = "4"
@@ -217,10 +220,10 @@ Partial Class Form1
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.txtEnviado)
-        Me.GroupBox2.Location = New System.Drawing.Point(249, 12)
+        Me.GroupBox2.Location = New System.Drawing.Point(15, 272)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(196, 100)
-        Me.GroupBox2.TabIndex = 1
+        Me.GroupBox2.Size = New System.Drawing.Size(196, 52)
+        Me.GroupBox2.TabIndex = 28
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Mensagens"
         '
@@ -229,15 +232,14 @@ Partial Class Form1
         Me.txtEnviado.Location = New System.Drawing.Point(6, 18)
         Me.txtEnviado.Multiline = True
         Me.txtEnviado.Name = "txtEnviado"
-        Me.txtEnviado.Size = New System.Drawing.Size(184, 74)
+        Me.txtEnviado.Size = New System.Drawing.Size(184, 24)
         Me.txtEnviado.TabIndex = 0
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(457, 288)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.ClientSize = New System.Drawing.Size(258, 359)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
