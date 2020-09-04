@@ -81,7 +81,6 @@ Partial Class Form1
         '
         'txtTerminais
         '
-        Me.txtTerminais.Enabled = False
         Me.txtTerminais.Location = New System.Drawing.Point(114, 75)
         Me.txtTerminais.Name = "txtTerminais"
         Me.txtTerminais.ReadOnly = True
@@ -122,9 +121,9 @@ Partial Class Form1
         '
         'txtCiclos
         '
-        Me.txtCiclos.Enabled = False
         Me.txtCiclos.Location = New System.Drawing.Point(114, 129)
         Me.txtCiclos.Name = "txtCiclos"
+        Me.txtCiclos.ReadOnly = True
         Me.txtCiclos.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtCiclos.Size = New System.Drawing.Size(73, 21)
         Me.txtCiclos.TabIndex = 5
@@ -133,9 +132,9 @@ Partial Class Form1
         '
         'txtAngStep
         '
-        Me.txtAngStep.Enabled = False
         Me.txtAngStep.Location = New System.Drawing.Point(114, 102)
         Me.txtAngStep.Name = "txtAngStep"
+        Me.txtAngStep.ReadOnly = True
         Me.txtAngStep.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtAngStep.Size = New System.Drawing.Size(73, 21)
         Me.txtAngStep.TabIndex = 4
@@ -146,6 +145,7 @@ Partial Class Form1
         '
         Me.txtSteps.Location = New System.Drawing.Point(114, 47)
         Me.txtSteps.Name = "txtSteps"
+        Me.txtSteps.ReadOnly = True
         Me.txtSteps.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtSteps.Size = New System.Drawing.Size(73, 21)
         Me.txtSteps.TabIndex = 2
@@ -156,7 +156,7 @@ Partial Class Form1
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(66, 184)
+        Me.Label2.Location = New System.Drawing.Point(66, 158)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(42, 16)
         Me.Label2.TabIndex = 19
@@ -165,8 +165,8 @@ Partial Class Form1
         'cmbMotor
         '
         Me.cmbMotor.FormattingEnabled = True
-        Me.cmbMotor.Items.AddRange(New Object() {"Motor 1", "Motor 2", "Ambos"})
-        Me.cmbMotor.Location = New System.Drawing.Point(114, 183)
+        Me.cmbMotor.Items.AddRange(New Object() {"Motor 1"})
+        Me.cmbMotor.Location = New System.Drawing.Point(114, 157)
         Me.cmbMotor.Name = "cmbMotor"
         Me.cmbMotor.Size = New System.Drawing.Size(73, 21)
         Me.cmbMotor.TabIndex = 7
@@ -186,11 +186,11 @@ Partial Class Form1
         '
         Me.chkInvert.AutoSize = True
         Me.chkInvert.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkInvert.Location = New System.Drawing.Point(114, 160)
+        Me.chkInvert.Location = New System.Drawing.Point(115, 184)
         Me.chkInvert.Name = "chkInvert"
-        Me.chkInvert.Size = New System.Drawing.Size(73, 18)
+        Me.chkInvert.Size = New System.Drawing.Size(68, 18)
         Me.chkInvert.TabIndex = 6
-        Me.chkInvert.Text = "Inverter?"
+        Me.chkInvert.Text = "Inverter"
         Me.chkInvert.UseVisualStyleBackColor = True
         '
         'Label1
@@ -205,6 +205,7 @@ Partial Class Form1
         '
         'txtAngulo
         '
+        Me.txtAngulo.AutoCompleteCustomSource.AddRange(New String() {"30", "60", "90", "120", "150", "180", "210", "240", "270", "300", "330", "360"})
         Me.txtAngulo.Location = New System.Drawing.Point(114, 21)
         Me.txtAngulo.Name = "txtAngulo"
         Me.txtAngulo.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -220,7 +221,7 @@ Partial Class Form1
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.txtEnviado)
-        Me.GroupBox2.Location = New System.Drawing.Point(15, 272)
+        Me.GroupBox2.Location = New System.Drawing.Point(16, 272)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(196, 52)
         Me.GroupBox2.TabIndex = 28
