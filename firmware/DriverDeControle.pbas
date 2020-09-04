@@ -9,8 +9,6 @@ dim x        as integer
 dim tmpOn    as integer
 dim tmpOff   as integer
 dim s1       as boolean
-dim s2       as boolean
-dim s3       as boolean
 
 
 sub procedure giraMotor()
@@ -27,42 +25,6 @@ sub procedure giraMotor()
               PORTC=%00001000 vdelay_ms(tmpOn)
               PORTC=%00000100 vdelay_ms(tmpOn)
               PORTC=%00000010 vdelay_ms(tmpOn)
-              PORTC=%00000001 vdelay_ms(tmpOn)
-           end if
-        end if
-        
-        if motor = 2 then
-           if s2 = true then
-              PORTC=%00010000 vdelay_ms(tmpOn)
-              PORTC=%00100000 vdelay_ms(tmpOn)
-              PORTC=%01000000 vdelay_ms(tmpOn)
-              PORTC=%10000000 vdelay_ms(tmpOn)
-           else
-              PORTC=%10000000 vdelay_ms(tmpOn)
-              PORTC=%01000000 vdelay_ms(tmpOn)
-              PORTC=%00100000 vdelay_ms(tmpOn)
-              PORTC=%00010000 vdelay_ms(tmpOn)
-           end if
-        end if
-        
-        if motor = 3 then
-           if s3 = true then
-              PORTC=%00000001 vdelay_ms(tmpOn)
-              PORTC=%00010000 vdelay_ms(tmpOn)
-              PORTC=%00000010 vdelay_ms(tmpOn)
-              PORTC=%00100000 vdelay_ms(tmpOn)
-              PORTC=%00000100 vdelay_ms(tmpOn)
-              PORTC=%01000000 vdelay_ms(tmpOn)
-              PORTC=%00001000 vdelay_ms(tmpOn)
-              PORTC=%10000000 vdelay_ms(tmpOn)
-           else
-              PORTC=%10000000 vdelay_ms(tmpOn)
-              PORTC=%00001000 vdelay_ms(tmpOn)
-              PORTC=%01000000 vdelay_ms(tmpOn)
-              PORTC=%00000100 vdelay_ms(tmpOn)
-              PORTC=%00100000 vdelay_ms(tmpOn)
-              PORTC=%00000010 vdelay_ms(tmpOn)
-              PORTC=%00010000 vdelay_ms(tmpOn)
               PORTC=%00000001 vdelay_ms(tmpOn)
            end if
         end if
@@ -87,8 +49,6 @@ Usart_Init(9600)
 tmpOn=50
 tmpOff=0
 s1=false
-s2=false
-s3=false
 
 executa:
         if Usart_Data_Ready() > 0 then
@@ -103,26 +63,6 @@ executa:
            else
               s1 = false
               porta.0 = 0
-           end if
-           
-           if strcmp(invert, "SN") = 0 then
-              s2 = true
-              porta.1 = 1
-           else
-              s2 = false
-              porta.1 = 0
-           end if
-           
-           if strcmp(invert, "AN") = 0 then
-              s3 = true
-              porta.0 = 1
-              porta.1 = 1
-              porta.2 = 1
-           else
-              s3 = false
-              porta.1 = 0
-              porta.2 = 0
-              porta.2 = 0
            end if
            
            motor = valor div 1000
