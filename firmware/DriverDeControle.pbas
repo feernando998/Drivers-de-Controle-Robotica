@@ -3,6 +3,7 @@ program DriverDeControle
 dim valorStr as string[6]
 dim invert   as string[6]
 dim valor    as integer
+dim valorCic as integer
 dim motor    as integer
 dim ciclo    as integer
 dim x        as integer
@@ -36,7 +37,7 @@ end sub
 
 
 main:
-TRISA=%11111000
+TRISA=%11111110
 TRISB=%01111111
 TRISC=%00000000
 INTCON=%00000000
@@ -67,6 +68,7 @@ executa:
            
            motor = valor div 1000
            ciclo = valor - (motor * 1000)
+           
            giraMotor()
 
            valorStr=""

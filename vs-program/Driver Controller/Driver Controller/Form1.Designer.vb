@@ -24,6 +24,8 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txtEnviado = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtTerminais = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -39,8 +41,6 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtAngulo = New System.Windows.Forms.TextBox()
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.txtEnviado = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -69,6 +69,24 @@ Partial Class Form1
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.txtEnviado)
+        Me.GroupBox2.Location = New System.Drawing.Point(16, 272)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(196, 52)
+        Me.GroupBox2.TabIndex = 28
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Mensagens"
+        '
+        'txtEnviado
+        '
+        Me.txtEnviado.Location = New System.Drawing.Point(6, 18)
+        Me.txtEnviado.Multiline = True
+        Me.txtEnviado.Name = "txtEnviado"
+        Me.txtEnviado.Size = New System.Drawing.Size(184, 24)
+        Me.txtEnviado.TabIndex = 0
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -83,7 +101,6 @@ Partial Class Form1
         '
         Me.txtTerminais.Location = New System.Drawing.Point(114, 75)
         Me.txtTerminais.Name = "txtTerminais"
-        Me.txtTerminais.ReadOnly = True
         Me.txtTerminais.Size = New System.Drawing.Size(73, 21)
         Me.txtTerminais.TabIndex = 3
         Me.txtTerminais.Text = "4"
@@ -123,7 +140,6 @@ Partial Class Form1
         '
         Me.txtCiclos.Location = New System.Drawing.Point(114, 129)
         Me.txtCiclos.Name = "txtCiclos"
-        Me.txtCiclos.ReadOnly = True
         Me.txtCiclos.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtCiclos.Size = New System.Drawing.Size(73, 21)
         Me.txtCiclos.TabIndex = 5
@@ -134,7 +150,6 @@ Partial Class Form1
         '
         Me.txtAngStep.Location = New System.Drawing.Point(114, 102)
         Me.txtAngStep.Name = "txtAngStep"
-        Me.txtAngStep.ReadOnly = True
         Me.txtAngStep.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtAngStep.Size = New System.Drawing.Size(73, 21)
         Me.txtAngStep.TabIndex = 4
@@ -145,7 +160,6 @@ Partial Class Form1
         '
         Me.txtSteps.Location = New System.Drawing.Point(114, 47)
         Me.txtSteps.Name = "txtSteps"
-        Me.txtSteps.ReadOnly = True
         Me.txtSteps.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtSteps.Size = New System.Drawing.Size(73, 21)
         Me.txtSteps.TabIndex = 2
@@ -217,24 +231,6 @@ Partial Class Form1
         'SerialPort1
         '
         Me.SerialPort1.PortName = "COM4"
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.txtEnviado)
-        Me.GroupBox2.Location = New System.Drawing.Point(16, 272)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(196, 52)
-        Me.GroupBox2.TabIndex = 28
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Mensagens"
-        '
-        'txtEnviado
-        '
-        Me.txtEnviado.Location = New System.Drawing.Point(6, 18)
-        Me.txtEnviado.Multiline = True
-        Me.txtEnviado.Name = "txtEnviado"
-        Me.txtEnviado.Size = New System.Drawing.Size(184, 24)
-        Me.txtEnviado.TabIndex = 0
         '
         'Form1
         '

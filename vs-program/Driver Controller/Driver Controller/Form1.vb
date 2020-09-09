@@ -8,8 +8,9 @@
     End Sub
 
     Private Sub btnEnviar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEnviar.Click
+
         txtAngStep.Text = txtSteps.Text * txtTerminais.Text
-        txtCiclos.Text = txtAngulo.Text * 1 / txtAngStep.Text
+        txtCiclos.Text = (txtAngulo.Text * 1) / txtAngStep.Text
 
         If SerialPort1.IsOpen() = True Then
             If cmbMotor.SelectedIndex = 0 Then
@@ -20,24 +21,8 @@
                     SerialPort1.Write(Str(Int(txtCiclos.Text * 1 + 1000)) & "-PI/")
                     txtEnviado.Text = Str(Int(txtCiclos.Text * 1 + 1000)) + "-PI/"
                 End If
-            ElseIf cmbMotor.SelectedIndex = 1 Then
-                If chkInvert.Checked = False Then
-                    SerialPort1.Write(Str(Int(txtCiclos.Text * 1 + 2000)) & "-SN/")
-                    txtEnviado.Text = Str(Int(txtCiclos.Text * 1 + 2000)) + "-SN/"
-                Else
-                    SerialPort1.Write(Str(Int(txtCiclos.Text * 1 + 2000)) & "-SI/")
-                    txtEnviado.Text = Str(Int(txtCiclos.Text * 1 + 2000)) + "-SI/"
-                End If
-            ElseIf cmbMotor.SelectedIndex = 2 Then
-                If chkInvert.Checked = False Then
-                    SerialPort1.Write(Str(Int(txtCiclos.Text * 1 + 3000)) & "-AN/")
-                    txtEnviado.Text = Str(Int(txtCiclos.Text * 1 + 3000)) + "-AN/"
-                Else
-                    SerialPort1.Write(Str(Int(txtCiclos.Text * 1 + 3000)) & "-AI/")
-                    txtEnviado.Text = Str(Int(txtCiclos.Text * 1 + 3000)) + "-AI/"
-                End If
             End If
         End If
-        
+
     End Sub
 End Class
