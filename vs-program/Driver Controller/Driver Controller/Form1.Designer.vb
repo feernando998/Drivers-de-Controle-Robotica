@@ -202,9 +202,9 @@ Partial Class Form1
         Me.chkInvert.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkInvert.Location = New System.Drawing.Point(115, 184)
         Me.chkInvert.Name = "chkInvert"
-        Me.chkInvert.Size = New System.Drawing.Size(68, 18)
+        Me.chkInvert.Size = New System.Drawing.Size(73, 18)
         Me.chkInvert.TabIndex = 6
-        Me.chkInvert.Text = "Inverter"
+        Me.chkInvert.Text = "Inverter?"
         Me.chkInvert.UseVisualStyleBackColor = True
         '
         'Label1

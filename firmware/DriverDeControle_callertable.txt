@@ -1,7 +1,4 @@
 main
-	Mul_16x16_S
-	Div_16x16_S
-		Div_16x16_S_L
 	USART_Init
 	giraMotor
 		VDelay_ms

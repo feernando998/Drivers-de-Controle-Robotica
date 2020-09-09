@@ -15,11 +15,11 @@
         If SerialPort1.IsOpen() = True Then
             If cmbMotor.SelectedIndex = 0 Then
                 If chkInvert.Checked = False Then
-                    SerialPort1.Write(Str(Int(txtCiclos.Text * 1 + 1000)) & "-PN/")
-                    txtEnviado.Text = Str(Int(txtCiclos.Text * 1 + 1000)) + "-PN/"
+                    SerialPort1.Write(Str(Int(txtCiclos.Text * 1)) & "-N/")
+                    txtEnviado.Text = Str(Int(txtCiclos.Text * 1)) + "-N/"
                 Else
-                    SerialPort1.Write(Str(Int(txtCiclos.Text * 1 + 1000)) & "-PI/")
-                    txtEnviado.Text = Str(Int(txtCiclos.Text * 1 + 1000)) + "-PI/"
+                    SerialPort1.Write(Str(Int(txtCiclos.Text * 1)) & "-I/")
+                    txtEnviado.Text = Str(Int(txtCiclos.Text * 1)) + "-I/"
                 End If
             End If
         End If
