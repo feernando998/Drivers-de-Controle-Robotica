@@ -1,18 +1,14 @@
 program DriverDeControle
 
-dim valorStr  as string[6]
-dim invertStr as string[6]
-dim valor     as integer
-dim x         as integer
 dim tmpOn     as integer
 dim tmpOff    as integer
 dim invert    as boolean
 
-sub procedure giraMotor(dim ciclo as integer)
+sub procedure giraMotor()
 
-    for x = 1 to ciclo
+    while PORTA.0 = 1
        if invert = true then
-          PORTC=1 vdelay_ms(tmpOn)
+          PORTC=1 VDelay_ms(tmpOn)
           PORTC=2 vdelay_ms(tmpOn)
           PORTC=4 vdelay_ms(tmpOn)
           PORTC=8 vdelay_ms(tmpOn)
@@ -22,19 +18,19 @@ sub procedure giraMotor(dim ciclo as integer)
           PORTC=2 vdelay_ms(tmpOn)
           PORTC=1 vdelay_ms(tmpOn)
        end if
-    next x
-    
-    PORTC=0
+    wend
+
 end sub
 
 
 main:
-TRISA=%11111110
-TRISB=%01111111
+TRISA=%11111111
+TRISB=%11111111
 TRISC=%00000000
 INTCON=%00000000
 ANSEL=%00000000
 ANSELH=%00000000
+PORTA=0
 PORTC=0
 
 Usart_Init(9600)
@@ -44,26 +40,14 @@ tmpOff=0
 invert=false
 
 executa:
-        if Usart_Data_Ready() > 0 then
-        
-           Usart_Read_Text(valorStr,"-")
-           Usart_Read_Text(invertStr,"/")
-           valor = StrToInt(valorStr)
-           
-           if strcmp(invertStr, "N") = 0 then
-              invert = true
-              porta.0 = 1
-           else
-              invert = false
-              porta.0 = 0
-           end if
-           
-           giraMotor(valor)
+       
+       if PORTA.1 = 0 then
+          invert = true
+       else
+          invert = false
+       end if
+       
+       giraMotor()
 
-        end if
-
-        valorStr=""
-        invert=""
-
-        goto executa
+      goto executa
 end.

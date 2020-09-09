@@ -153,7 +153,7 @@ Partial Class Form1
         Me.txtAngStep.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtAngStep.Size = New System.Drawing.Size(73, 21)
         Me.txtAngStep.TabIndex = 4
-        Me.txtAngStep.Text = "32"
+        Me.txtAngStep.Text = "30"
         Me.txtAngStep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtSteps

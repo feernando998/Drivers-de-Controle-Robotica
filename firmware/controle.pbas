@@ -1,0 +1,63 @@
+program controle
+
+dim valorStr  as string[6]
+dim invertStr as string[6]
+dim valor     as integer
+dim x         as integer
+dim tmpOn     as integer
+dim tmpOff    as integer
+dim invert    as boolean
+
+sub procedure giraMotor(dim ciclo as integer)
+
+    for x = 1 to ciclo
+        
+       if invert = true then
+          PORTC = 3 vdelay_ms(tmpOn)
+       else
+          PORTC = 1 vdelay_ms(tmpOn)
+       end if
+    next x
+
+end sub
+
+
+main:
+TRISA=%11111111
+TRISB=%01111111
+TRISC=%00000000
+INTCON=%00000000
+ANSEL=%00000000
+ANSELH=%00000000
+PORTC = 0
+
+Usart_Init(9600)
+
+tmpOn=180
+tmpOff=0
+invert=false
+
+executa:
+        if Usart_Data_Ready() > 0 then
+
+           Usart_Read_Text(valorStr,"-")
+           Usart_Read_Text(invertStr,"/")
+           valor = StrToInt(valorStr)
+
+           if strcmp(invertStr, "N") = 0 then
+              invert = false
+              else if strcmp(invertStr, "I") = 0 then
+                   invert = true
+              end if
+           end if
+
+           giraMotor(valor)
+           delay_ms(10)
+           PORTC = 0
+
+        end if
+
+        valorStr=""
+
+        goto executa
+end.
