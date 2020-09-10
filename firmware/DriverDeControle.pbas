@@ -2,7 +2,6 @@ program DriverDeControle
 
 dim tmpOn     as integer
 dim tmpOff    as integer
-dim invert    as boolean
 
 sub procedure giraMotor(dim invert    as boolean)
 
@@ -39,7 +38,6 @@ Usart_Init(9600)
 
 tmpOn=50
 tmpOff=0
-invert=false
 
 executa:
        
