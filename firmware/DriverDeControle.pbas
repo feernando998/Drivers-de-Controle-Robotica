@@ -4,21 +4,23 @@ dim tmpOn     as integer
 dim tmpOff    as integer
 dim invert    as boolean
 
-sub procedure giraMotor()
+sub procedure giraMotor(dim invert    as boolean)
 
     while PORTA.0 = 1
-       if invert = true then
+       if invert = false then
           PORTC=1 VDelay_ms(tmpOn)
           PORTC=2 vdelay_ms(tmpOn)
           PORTC=4 vdelay_ms(tmpOn)
           PORTC=8 vdelay_ms(tmpOn)
-       else
+       end if
+       if invert = true then
           PORTC=8 vdelay_ms(tmpOn)
           PORTC=4 vdelay_ms(tmpOn)
           PORTC=2 vdelay_ms(tmpOn)
           PORTC=1 vdelay_ms(tmpOn)
        end if
     wend
+
 
 end sub
 
@@ -41,13 +43,12 @@ invert=false
 
 executa:
        
+       if PORTA.1 = 1 then
+          giraMotor(true)
+       end if
        if PORTA.1 = 0 then
-          invert = true
-       else
-          invert = false
+          giraMotor(false)
        end if
        
-       giraMotor()
-
       goto executa
 end.
