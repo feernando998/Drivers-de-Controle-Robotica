@@ -4,24 +4,34 @@ dim valorStr  as string[6]
 dim invertStr as string[6]
 dim forma     as string[6]
 dim valor     as integer
-dim x         as integer
+dim i         as integer
 dim tmpOn     as integer
-dim tmpOff    as integer
 dim invert    as boolean
+dim half      as boolean
 
 sub procedure giraMotor(dim ciclo as integer)
 
-    for x = 1 to ciclo
-
-       if invert = true then
-          PORTC = 3 vdelay_ms(tmpOn)
-       else
-          PORTC = 1 vdelay_ms(tmpOn)
-       end if
-    next x
+    for i = 1 to ciclo
+    
+         if (invert = true) and (half = false) then
+            PORTC = 3 vdelay_ms(tmpOn)
+         else
+             if (invert = true) and (half = true) then
+                PORTC = 7 vdelay_ms(tmpOn)
+             else
+                 if (invert = false) and (half = true) then
+                    PORTC = 5 vdelay_ms(tmpOn)
+                 else
+                     if (invert = false) and (half = false) then
+                        PORTC = 1 vdelay_ms(tmpOn)
+                     end if
+                 end if
+             end if
+         end if
+         
+    next i
 
 end sub
-
 
 main:
 TRISA=%11111111
@@ -35,31 +45,41 @@ PORTC = 0
 Usart_Init(9600)
 
 tmpOn=180
-tmpOff=0
 invert=false
+half=false
 
 executa:
         if Usart_Data_Ready() > 0 then
 
            Usart_Read_Text(valorStr,"-")
            Usart_Read_Text(invertStr,"/")
+           Usart_Read_Text(forma,"\")
+           
            valor = StrToInt(valorStr)
 
            if strcmp(invertStr, "N") = 0 then
               invert = false
               else if strcmp(invertStr, "I") = 0 then
-                   invert = true
+                      invert = true
+              end if
+           end if
+
+           if strcmp(forma, "H") = 0 then
+              half = true
+           else
+              if strcmp(forma, "W") = 0 then
+                 half = false
               end if
            end if
 
            giraMotor(valor)
            delay_ms(10)
            PORTC = 0
-
         end if
 
         valorStr=""
         invert=""
+        forma=""
 
         goto executa
 end.

@@ -1,9 +1,8 @@
 program DriverDeControle
 
 dim tmpOn     as integer
-dim tmpOff    as integer
 
-sub procedure giraMotor(dim invert    as boolean)
+sub procedure giraMotor(dim invert as boolean)
 
     while PORTA.0 = 1
         if invert then
@@ -18,6 +17,21 @@ sub procedure giraMotor(dim invert    as boolean)
           PORTC=8 vdelay_ms(tmpOn)
        end if
     wend
+    
+     while (PORTA.0 = 1) and (PORTA.2 = 1)
+        if invert then
+          PORTC=9 vdelay_ms(tmpOn)
+          PORTC=4 vdelay_ms(tmpOn)
+          PORTC=2 vdelay_ms(tmpOn)
+          PORTC=1 vdelay_ms(tmpOn)
+       else
+          PORTC=1 VDelay_ms(tmpOn)
+          PORTC=2 vdelay_ms(tmpOn)
+          PORTC=4 vdelay_ms(tmpOn)
+          PORTC=9 vdelay_ms(tmpOn)
+       end if
+    wend
+    
 
 end sub
 
@@ -35,14 +49,18 @@ PORTC=0
 Usart_Init(9600)
 
 tmpOn=50
-tmpOff=0
 
 executa:
-       
        if PORTA.1 = 1 then
           giraMotor(true)
        end if
        if PORTA.1 = 0 then
+          giraMotor(false)
+       end if
+       if (PORTA.2 = 1) and (PORTA.1 = 1)  then
+          giraMotor(true)
+       end if
+       if (PORTA.2 = 1) and (PORTA.1 = 0)  then
           giraMotor(false)
        end if
        
