@@ -2,6 +2,7 @@ program controle
 
 dim valorStr  as string[6]
 dim invertStr as string[6]
+dim forma     as string[6]
 dim valor     as integer
 dim x         as integer
 dim tmpOn     as integer
@@ -11,7 +12,7 @@ dim invert    as boolean
 sub procedure giraMotor(dim ciclo as integer)
 
     for x = 1 to ciclo
-        
+
        if invert = true then
           PORTC = 3 vdelay_ms(tmpOn)
        else
@@ -58,6 +59,7 @@ executa:
         end if
 
         valorStr=""
+        invert=""
 
         goto executa
 end.

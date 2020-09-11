@@ -34,19 +34,20 @@ Partial Class Form1
         Me.txtCiclos = New System.Windows.Forms.TextBox()
         Me.txtAngStep = New System.Windows.Forms.TextBox()
         Me.txtSteps = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.cmbMotor = New System.Windows.Forms.ComboBox()
         Me.btnEnviar = New System.Windows.Forms.Button()
         Me.chkInvert = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtAngulo = New System.Windows.Forms.TextBox()
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
+        Me.CheckBoxHalf = New System.Windows.Forms.CheckBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.CheckBoxHalf)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.txtTerminais)
@@ -57,7 +58,6 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.txtAngStep)
         Me.GroupBox1.Controls.Add(Me.txtSteps)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.cmbMotor)
         Me.GroupBox1.Controls.Add(Me.btnEnviar)
         Me.GroupBox1.Controls.Add(Me.chkInvert)
         Me.GroupBox1.Controls.Add(Me.Label1)
@@ -65,23 +65,23 @@ Partial Class Form1
         Me.GroupBox1.Font = New System.Drawing.Font("Bahnschrift SemiBold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(231, 334)
+        Me.GroupBox1.Size = New System.Drawing.Size(234, 293)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.txtEnviado)
-        Me.GroupBox2.Location = New System.Drawing.Point(16, 272)
+        Me.GroupBox2.Location = New System.Drawing.Point(9, 232)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(196, 52)
+        Me.GroupBox2.Size = New System.Drawing.Size(220, 52)
         Me.GroupBox2.TabIndex = 28
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Mensagens"
         '
         'txtEnviado
         '
-        Me.txtEnviado.Location = New System.Drawing.Point(6, 18)
+        Me.txtEnviado.Location = New System.Drawing.Point(17, 20)
         Me.txtEnviado.Multiline = True
         Me.txtEnviado.Name = "txtEnviado"
         Me.txtEnviado.Size = New System.Drawing.Size(184, 24)
@@ -99,6 +99,7 @@ Partial Class Form1
         '
         'txtTerminais
         '
+        Me.txtTerminais.Enabled = False
         Me.txtTerminais.Location = New System.Drawing.Point(114, 75)
         Me.txtTerminais.Name = "txtTerminais"
         Me.txtTerminais.Size = New System.Drawing.Size(73, 21)
@@ -148,6 +149,7 @@ Partial Class Form1
         '
         'txtAngStep
         '
+        Me.txtAngStep.Enabled = False
         Me.txtAngStep.Location = New System.Drawing.Point(114, 102)
         Me.txtAngStep.Name = "txtAngStep"
         Me.txtAngStep.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -160,36 +162,18 @@ Partial Class Form1
         '
         Me.txtSteps.Location = New System.Drawing.Point(114, 47)
         Me.txtSteps.Name = "txtSteps"
+        Me.txtSteps.ReadOnly = True
         Me.txtSteps.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtSteps.Size = New System.Drawing.Size(73, 21)
         Me.txtSteps.TabIndex = 2
         Me.txtSteps.Text = "7,5"
         Me.txtSteps.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(66, 158)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(42, 16)
-        Me.Label2.TabIndex = 19
-        Me.Label2.Text = "Motor"
-        '
-        'cmbMotor
-        '
-        Me.cmbMotor.FormattingEnabled = True
-        Me.cmbMotor.Items.AddRange(New Object() {"Motor 1"})
-        Me.cmbMotor.Location = New System.Drawing.Point(114, 157)
-        Me.cmbMotor.Name = "cmbMotor"
-        Me.cmbMotor.Size = New System.Drawing.Size(73, 21)
-        Me.cmbMotor.TabIndex = 7
-        '
         'btnEnviar
         '
         Me.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btnEnviar.Font = New System.Drawing.Font("Bahnschrift SemiBold", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEnviar.Location = New System.Drawing.Point(7, 225)
+        Me.btnEnviar.Location = New System.Drawing.Point(11, 182)
         Me.btnEnviar.Name = "btnEnviar"
         Me.btnEnviar.Size = New System.Drawing.Size(218, 33)
         Me.btnEnviar.TabIndex = 8
@@ -200,11 +184,11 @@ Partial Class Form1
         '
         Me.chkInvert.AutoSize = True
         Me.chkInvert.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkInvert.Location = New System.Drawing.Point(115, 184)
+        Me.chkInvert.Location = New System.Drawing.Point(114, 158)
         Me.chkInvert.Name = "chkInvert"
-        Me.chkInvert.Size = New System.Drawing.Size(73, 18)
+        Me.chkInvert.Size = New System.Drawing.Size(42, 18)
         Me.chkInvert.TabIndex = 6
-        Me.chkInvert.Text = "Inverter?"
+        Me.chkInvert.Text = "Inv"
         Me.chkInvert.UseVisualStyleBackColor = True
         '
         'Label1
@@ -232,11 +216,31 @@ Partial Class Form1
         '
         Me.SerialPort1.PortName = "COM4"
         '
+        'CheckBoxHalf
+        '
+        Me.CheckBoxHalf.AutoSize = True
+        Me.CheckBoxHalf.Location = New System.Drawing.Point(154, 159)
+        Me.CheckBoxHalf.Name = "CheckBoxHalf"
+        Me.CheckBoxHalf.Size = New System.Drawing.Size(45, 17)
+        Me.CheckBoxHalf.TabIndex = 29
+        Me.CheckBoxHalf.Text = "Half"
+        Me.CheckBoxHalf.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(66, 158)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(42, 16)
+        Me.Label2.TabIndex = 19
+        Me.Label2.Text = "Motor"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(258, 359)
+        Me.ClientSize = New System.Drawing.Size(258, 311)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
@@ -257,8 +261,6 @@ Partial Class Form1
     Friend WithEvents txtCiclos As System.Windows.Forms.TextBox
     Friend WithEvents txtAngStep As System.Windows.Forms.TextBox
     Friend WithEvents txtSteps As System.Windows.Forms.TextBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents cmbMotor As System.Windows.Forms.ComboBox
     Friend WithEvents btnEnviar As System.Windows.Forms.Button
     Friend WithEvents chkInvert As System.Windows.Forms.CheckBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -268,5 +270,7 @@ Partial Class Form1
     Friend WithEvents SerialPort1 As System.IO.Ports.SerialPort
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents txtEnviado As System.Windows.Forms.TextBox
+    Friend WithEvents CheckBoxHalf As System.Windows.Forms.CheckBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 
 End Class
