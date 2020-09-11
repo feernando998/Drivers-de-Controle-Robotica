@@ -106,9 +106,9 @@ Partial Class Form1
         '
         'txtTerminais
         '
-        Me.txtTerminais.Enabled = False
         Me.txtTerminais.Location = New System.Drawing.Point(114, 75)
         Me.txtTerminais.Name = "txtTerminais"
+        Me.txtTerminais.ReadOnly = True
         Me.txtTerminais.Size = New System.Drawing.Size(73, 21)
         Me.txtTerminais.TabIndex = 3
         Me.txtTerminais.Text = "4"
