@@ -9,6 +9,7 @@
     Private Sub btnEnviar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEnviar.Click
 
         Dim half As Boolean
+        Dim anguloPorCiclo As Integer
 
         If CheckBoxHalf.Checked = True Then
             txtSteps.Text = 3.75
@@ -16,8 +17,8 @@
             half = True
         Else
             txtSteps.Text = 7.5
-            txtAngStep.Text = txtSteps.Text * txtTerminais.Text
-            txtCiclos.Text = (txtAngulo.Text * 1) / txtAngStep.Text
+            anguloPorCiclo = txtSteps.Text * txtTerminais.Text
+            txtCiclos.Text = (txtAngulo.Text * 1) / anguloPorCiclo
             half = False
         End If
 

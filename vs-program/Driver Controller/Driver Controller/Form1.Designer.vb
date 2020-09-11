@@ -30,10 +30,8 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtTerminais = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtCiclos = New System.Windows.Forms.TextBox()
-        Me.txtAngStep = New System.Windows.Forms.TextBox()
         Me.txtSteps = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnEnviar = New System.Windows.Forms.Button()
@@ -52,10 +50,8 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.txtTerminais)
         Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.txtCiclos)
-        Me.GroupBox1.Controls.Add(Me.txtAngStep)
         Me.GroupBox1.Controls.Add(Me.txtSteps)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.btnEnviar)
@@ -65,14 +61,14 @@ Partial Class Form1
         Me.GroupBox1.Font = New System.Drawing.Font("Bahnschrift SemiBold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(234, 293)
+        Me.GroupBox1.Size = New System.Drawing.Size(234, 268)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
         'CheckBoxHalf
         '
         Me.CheckBoxHalf.AutoSize = True
-        Me.CheckBoxHalf.Location = New System.Drawing.Point(154, 159)
+        Me.CheckBoxHalf.Location = New System.Drawing.Point(154, 133)
         Me.CheckBoxHalf.Name = "CheckBoxHalf"
         Me.CheckBoxHalf.Size = New System.Drawing.Size(45, 17)
         Me.CheckBoxHalf.TabIndex = 29
@@ -82,7 +78,7 @@ Partial Class Form1
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.txtEnviado)
-        Me.GroupBox2.Location = New System.Drawing.Point(9, 232)
+        Me.GroupBox2.Location = New System.Drawing.Point(9, 206)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(220, 52)
         Me.GroupBox2.TabIndex = 28
@@ -122,21 +118,11 @@ Partial Class Form1
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(65, 130)
+        Me.Label5.Location = New System.Drawing.Point(65, 104)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(43, 16)
         Me.Label5.TabIndex = 25
         Me.Label5.Text = "Ciclos"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(8, 103)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(100, 16)
-        Me.Label4.TabIndex = 24
-        Me.Label4.Text = "Ângulo por ciclo"
         '
         'Label3
         '
@@ -150,24 +136,13 @@ Partial Class Form1
         '
         'txtCiclos
         '
-        Me.txtCiclos.Location = New System.Drawing.Point(114, 129)
+        Me.txtCiclos.Location = New System.Drawing.Point(114, 103)
         Me.txtCiclos.Name = "txtCiclos"
         Me.txtCiclos.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtCiclos.Size = New System.Drawing.Size(73, 21)
         Me.txtCiclos.TabIndex = 5
         Me.txtCiclos.Text = "12"
         Me.txtCiclos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'txtAngStep
-        '
-        Me.txtAngStep.Enabled = False
-        Me.txtAngStep.Location = New System.Drawing.Point(114, 102)
-        Me.txtAngStep.Name = "txtAngStep"
-        Me.txtAngStep.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.txtAngStep.Size = New System.Drawing.Size(73, 21)
-        Me.txtAngStep.TabIndex = 4
-        Me.txtAngStep.Text = "30"
-        Me.txtAngStep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtSteps
         '
@@ -184,7 +159,7 @@ Partial Class Form1
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(66, 158)
+        Me.Label2.Location = New System.Drawing.Point(66, 132)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(42, 16)
         Me.Label2.TabIndex = 19
@@ -194,7 +169,7 @@ Partial Class Form1
         '
         Me.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btnEnviar.Font = New System.Drawing.Font("Bahnschrift SemiBold", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEnviar.Location = New System.Drawing.Point(11, 182)
+        Me.btnEnviar.Location = New System.Drawing.Point(11, 156)
         Me.btnEnviar.Name = "btnEnviar"
         Me.btnEnviar.Size = New System.Drawing.Size(218, 33)
         Me.btnEnviar.TabIndex = 8
@@ -205,7 +180,7 @@ Partial Class Form1
         '
         Me.chkInvert.AutoSize = True
         Me.chkInvert.Font = New System.Drawing.Font("Bahnschrift SemiBold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkInvert.Location = New System.Drawing.Point(114, 158)
+        Me.chkInvert.Location = New System.Drawing.Point(114, 132)
         Me.chkInvert.Name = "chkInvert"
         Me.chkInvert.Size = New System.Drawing.Size(42, 18)
         Me.chkInvert.TabIndex = 6
@@ -241,7 +216,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(258, 311)
+        Me.ClientSize = New System.Drawing.Size(258, 286)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
@@ -257,10 +232,8 @@ Partial Class Form1
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txtCiclos As System.Windows.Forms.TextBox
-    Friend WithEvents txtAngStep As System.Windows.Forms.TextBox
     Friend WithEvents txtSteps As System.Windows.Forms.TextBox
     Friend WithEvents btnEnviar As System.Windows.Forms.Button
     Friend WithEvents chkInvert As System.Windows.Forms.CheckBox
