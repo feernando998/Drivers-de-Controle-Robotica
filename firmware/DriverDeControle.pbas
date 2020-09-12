@@ -5,32 +5,34 @@ dim tmpOn     as integer
 sub procedure giraMotor(dim invert as boolean)
 
     while PORTA.0 = 1
-        if invert then
-          PORTC=8 vdelay_ms(tmpOn)
-          PORTC=4 vdelay_ms(tmpOn)
-          PORTC=2 vdelay_ms(tmpOn)
-          PORTC=1 vdelay_ms(tmpOn)
-       else
-          PORTC=1 VDelay_ms(tmpOn)
-          PORTC=2 vdelay_ms(tmpOn)
-          PORTC=4 vdelay_ms(tmpOn)
-          PORTC=8 vdelay_ms(tmpOn)
-       end if
+        if PORTA.2 = 1 then
+           if invert then
+              PORTC=9 vdelay_ms(tmpOn)
+              PORTC=4 vdelay_ms(tmpOn)
+              PORTC=2 vdelay_ms(tmpOn)
+              PORTC=1 vdelay_ms(tmpOn)
+           else
+              PORTC=1 VDelay_ms(tmpOn)
+              PORTC=2 vdelay_ms(tmpOn)
+              PORTC=4 vdelay_ms(tmpOn)
+              PORTC=9 vdelay_ms(tmpOn)
+           end if
+        else
+            if invert then
+              PORTC=8 vdelay_ms(tmpOn)
+              PORTC=4 vdelay_ms(tmpOn)
+              PORTC=2 vdelay_ms(tmpOn)
+              PORTC=1 vdelay_ms(tmpOn)
+           else
+              PORTC=1 VDelay_ms(tmpOn)
+              PORTC=2 vdelay_ms(tmpOn)
+              PORTC=4 vdelay_ms(tmpOn)
+              PORTC=8 vdelay_ms(tmpOn)
+           end if
+        end if
+
     wend
-    
-     while (PORTA.0 = 1) and (PORTA.2 = 1)
-        if invert then
-          PORTC=9 vdelay_ms(tmpOn)
-          PORTC=4 vdelay_ms(tmpOn)
-          PORTC=2 vdelay_ms(tmpOn)
-          PORTC=1 vdelay_ms(tmpOn)
-       else
-          PORTC=1 VDelay_ms(tmpOn)
-          PORTC=2 vdelay_ms(tmpOn)
-          PORTC=4 vdelay_ms(tmpOn)
-          PORTC=9 vdelay_ms(tmpOn)
-       end if
-    wend
+
     
 
 end sub

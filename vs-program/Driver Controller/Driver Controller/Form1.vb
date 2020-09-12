@@ -13,7 +13,8 @@
 
         If CheckBoxHalf.Checked = True Then
             txtSteps.Text = 3.75
-            txtCiclos.Text = txtAngulo.Text / 3.75
+            anguloPorCiclo = txtSteps.Text * txtTerminais.Text
+            txtCiclos.Text = (txtAngulo.Text * 1) / anguloPorCiclo
             half = True
         Else
             txtSteps.Text = 7.5
